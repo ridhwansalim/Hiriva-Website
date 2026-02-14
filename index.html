@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiriva - Global Talent. Intelligent Hiring.</title>
+    <meta name="description" content="Hiriva is a next-generation global recruitment and HR consultancy firm." />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        // =========================================================================
+        // 🎨 ONE-STOP COLOR CONFIGURATION
+        // Change these HEX codes to update the entire website's colors instantly!
+        // =========================================================================
+        const themeConfig = {
+            primary:       '#06b6d4',  // Cyan 500: Main color (Hero bg, Buttons, Highlights)
+            primaryHover:  '#0891b2',  // Cyan 600: Button hovers, dark accents
+            primaryLight:  '#cffafe',  // Cyan 100: Very light color for icon backgrounds
+            secondary:     '#ffffff',  // White: Main background color
+            secondaryAlt:  '#f8fafc',  // Slate 50: Slightly gray/blue background for alternating sections
+            textMain:      '#0f172a',  // Slate 900: Dark text for readability on white
+            textMuted:     '#475569',  // Slate 600: Muted text for paragraphs and subtitles
+            textLight:     '#ffffff',  // White text: Used on top of Primary (Cyan) backgrounds
+        };
+
+        // Injecting the custom colors into Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        theme: {
+                            'primary': themeConfig.primary,
+                            'primary-hover': themeConfig.primaryHover,
+                            'primary-light': themeConfig.primaryLight,
+                            'secondary': themeConfig.secondary,
+                            'secondary-alt': themeConfig.secondaryAlt,
+                            'text-main': themeConfig.textMain,
+                            'text-muted': themeConfig.textMuted,
+                            'text-light': themeConfig.textLight,
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-theme-secondary text-theme-text-main font-sans overflow-x-hidden selection:bg-theme-primary selection:text-theme-text-light">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-transparent text-theme-text-light">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2 relative z-50">
+                <img src="assets/Hiriva_Favicon.png" alt="Hiriva Logo" class="h-8 w-8">
+                <span>HIRIVA<span class="text-theme-primary logo-dot">.</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                <a href="#about" class="hover:opacity-70 transition-opacity uppercase tracking-wide text-xs">About</a>
+                <a href="#services" class="hover:opacity-70 transition-opacity uppercase tracking-wide text-xs">Services</a>
+                <a href="#industries" class="hover:opacity-70 transition-opacity uppercase tracking-wide text-xs">Industries</a>
+                <a href="#contact" class="hover:opacity-70 transition-opacity uppercase tracking-wide text-xs">Contact</a>
+                <a href="#contact" id="nav-cta" class="bg-theme-text-light text-theme-primary px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden relative z-50 focus:outline-none hover:opacity-70">
+                <svg id="icon-menu" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-theme-secondary text-theme-text-main border-t border-gray-100 p-6 flex-col gap-4 shadow-2xl hidden z-40">
+            <a href="#about" class="mobile-link text-lg font-medium hover:text-theme-primary py-3 border-b border-gray-100 block">About</a>
+            <a href="#services" class="mobile-link text-lg font-medium hover:text-theme-primary py-3 border-b border-gray-100 block">Services</a>
+            <a href="#industries" class="mobile-link text-lg font-medium hover:text-theme-primary py-3 border-b border-gray-100 block">Industries</a>
+            <a href="#contact" class="mobile-link mt-4 bg-theme-primary text-theme-text-light py-3 rounded-lg font-bold text-center block">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Primary Background) -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-theme-primary text-theme-text-light">
+        <div class="absolute inset-0 bg-grid-light pointer-events-none opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-theme-text-light/30 bg-theme-text-light/10 text-sm font-semibold tracking-wider uppercase backdrop-blur-sm">
+                    Smarter hiring. Faster deployment.
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">
+                    Powering Global Recruitment with <span class="text-theme-text-main/80 border-b-4 border-theme-text-light">AI Precision</span>
+                </h1>
+                <p class="text-lg md:text-xl text-theme-text-light/90 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+                    Connecting world-class talent from all over the world with forward-thinking organizations.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-theme-text-light text-theme-primary hover:bg-gray-50 rounded-full font-bold transition-all transform hover:-translate-y-1 shadow-xl text-center">
+                        Partner With Us
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-theme-text-light text-theme-text-light hover:bg-theme-text-light/10 rounded-full font-bold transition-all text-center">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+    </section>
+
+    <!-- Global Reach Bar (Darker Primary Background) -->
+    <div class="bg-theme-primary-hover text-theme-text-light relative z-10 shadow-inner">
+        <div class="container mx-auto px-6 py-6 md:py-8">
+            <div class="flex flex-wrap justify-center gap-6 md:gap-16 text-center font-bold uppercase tracking-widest text-xs md:text-sm opacity-90">
+                <span>Europe</span><span class="hidden md:inline opacity-50">•</span>
+                <span>India</span><span class="hidden md:inline opacity-50">•</span>
+                <span>Africa</span><span class="hidden md:inline opacity-50">•</span>
+                <span>Asia</span><span class="hidden md:inline opacity-50">•</span>
+                <span>Americas</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section (White Background) -->
+    <section id="about" class="py-24 relative z-10 bg-theme-secondary">
+        <div class="absolute inset-0 bg-grid-primary pointer-events-none opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-theme-primary-light rounded-2xl opacity-50 blur-lg"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaboration" class="relative rounded-2xl border border-gray-200 shadow-xl w-full object-cover h-[400px] md:h-[500px]" />
+                    
+                    <!-- Floating Stat -->
+                    <div class="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-theme-secondary p-6 rounded-xl border border-gray-100 shadow-2xl max-w-[200px] md:max-w-xs">
+                        <div class="flex items-center gap-4 mb-2 md:mb-3">
+                            <div class="w-10 h-10 bg-theme-primary-light text-theme-primary rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs md:text-sm text-theme-text-muted">Global Focus</div>
+                                <div class="font-bold text-lg md:text-xl text-theme-text-main">Intelligent Hiring</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm font-bold text-theme-primary uppercase tracking-widest mb-4">About Hiriva</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-theme-text-main">
+                        Intersection of <span class="text-theme-primary">Human Expertise</span> & Artificial Intelligence.
+                    </h3>
+                    <p class="text-theme-text-muted text-lg mb-6 leading-relaxed">
+                        Hiriva is a next-generation global recruitment and HR consultancy firm. We specialize in overseas recruitment and executive search, delivering high-quality talent across continents.
+                    </p>
+                    <p class="text-theme-text-muted text-lg mb-8 leading-relaxed">
+                        Our strength lies in combining deep industry insight with an AI-powered talent sourcing engine that ensures precision, speed, and performance.
+                    </p>
+                    <div class="border-l-4 border-theme-primary pl-6 text-theme-text-main font-semibold italic text-lg">
+                        "We don’t just match resumes. We match potential."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Secondary Alt Background) -->
+    <section id="services" class="py-24 bg-theme-secondary-alt border-y border-gray-200 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-theme-primary uppercase tracking-widest mb-4">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-theme-text-main">End-to-End International Solutions</h3>
+                <p class="text-theme-text-muted text-lg">From multinational corporations to emerging enterprises, Hiriva partners with organizations that demand excellence in hiring.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="group p-8 rounded-2xl bg-theme-secondary border border-gray-200 shadow-sm hover:shadow-xl transition-all hover:border-theme-primary/30">
+                    <div class="w-14 h-14 bg-theme-primary-light rounded-xl flex items-center justify-center text-theme-primary mb-6 group-hover:bg-theme-primary group-hover:text-theme-text-light transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-theme-text-main">1. Overseas Recruitment</h4>
+                    <p class="text-theme-text-muted mb-6 leading-relaxed">
+                        We provide end-to-end international recruitment solutions to ensure the right talent reaches the right destination efficiently and ethically.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-theme-text-main">
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> Talent sourcing & screening</li>
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> Documentation & compliance</li>
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> Global mobility coordination</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group p-8 rounded-2xl bg-theme-secondary border border-gray-200 shadow-sm hover:shadow-xl transition-all hover:border-theme-primary/30">
+                    <div class="w-14 h-14 bg-theme-primary-light rounded-xl flex items-center justify-center text-theme-primary mb-6 group-hover:bg-theme-primary group-hover:text-theme-text-light transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-theme-text-main">2. Executive & Corporate Search</h4>
+                    <p class="text-theme-text-muted mb-6 leading-relaxed">
+                        Specialized hiring for leadership and strategic roles. Our model focuses on confidentiality, strategic alignment, and long-term value creation.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-theme-text-main">
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> C-Suite & Senior Leadership</li>
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> Directors & Functional Heads</li>
+                        <li class="flex items-center gap-3"><div class="w-2 h-2 bg-theme-primary rounded-full"></div> Technical Specialists</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: AI Feature (Dark Slate background to pop) -->
+                <div class="group p-8 rounded-2xl bg-theme-text-main text-theme-text-light shadow-xl hover:shadow-2xl transition-all md:col-span-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-32 bg-theme-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                        <div class="flex-1">
+                            <div class="w-14 h-14 bg-theme-primary/20 rounded-xl flex items-center justify-center text-theme-primary mb-6 border border-theme-primary/30">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-4">3. AI-Powered Talent Sourcing Engine</h4>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                At the core of Hiriva lies our intelligent recruitment technology. It scans, analyzes, and matches candidates significantly reducing time-to-hire while improving hiring accuracy.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs font-medium text-gray-200">AI Resume Parsing</span>
+                                <span class="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs font-medium text-gray-200">Skill-Based Matching</span>
+                                <span class="px-3 py-1 bg-white/10 border border-white/10 rounded-full text-xs font-medium text-gray-200">Intelligent Mapping</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Visual representation of AI Match -->
+                        <div class="flex-1 w-full bg-white/5 rounded-xl p-6 border border-white/10 shadow-inner backdrop-blur-sm">
+                            <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-4">
+                                <span class="text-sm font-semibold text-gray-300">Predictive Fit Analysis</span>
+                                <span class="text-sm font-bold text-theme-primary">96% Accuracy</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Skill Assessment</span><span>98%</span></div>
+                                    <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-theme-primary w-[98%]"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Experience Match</span><span>94%</span></div>
+                                    <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-theme-primary w-[94%]"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Cultural Alignment</span><span>92%</span></div>
+                                    <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-theme-primary w-[92%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 (Full Width) -->
+                <div class="group p-8 rounded-2xl bg-theme-secondary border border-gray-200 shadow-sm hover:shadow-xl transition-all hover:border-theme-primary/30 md:col-span-2">
+                    <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                        <div class="w-14 h-14 bg-theme-primary-light rounded-xl flex items-center justify-center text-theme-primary flex-shrink-0">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2 text-theme-text-main">4. HR Consultancy</h4>
+                            <p class="text-theme-text-muted mb-4 leading-relaxed max-w-4xl">
+                                Beyond recruitment, we help businesses build scalable, future-ready HR systems through workforce planning, policy design, and technology advisory.
+                            </p>
+                            <div class="flex flex-wrap gap-4 text-sm font-bold text-theme-primary">
+                                <span class="bg-theme-primary-light px-3 py-1 rounded-full">Performance Management</span>
+                                <span class="bg-theme-primary-light px-3 py-1 rounded-full">Org Restructuring</span>
+                                <span class="bg-theme-primary-light px-3 py-1 rounded-full">Talent Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries & Why Us Section (White Background) -->
+    <section id="industries" class="py-24 relative z-10 bg-theme-secondary">
+        <div class="absolute inset-0 bg-grid-primary pointer-events-none opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            
+            <!-- Industries -->
+            <div class="mb-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold text-theme-primary uppercase tracking-widest mb-4">Sectors</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-theme-text-main">Industries We Serve</h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">🏥</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Healthcare</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">🛎️</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Hospitality</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">💻</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Technology</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">🏗️</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Construction</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">🏭</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Manufacturing</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">⛽</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Oil & Gas</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">🛍️</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Retail & Corporate</h4></div>
+                    <div class="p-6 rounded-xl bg-theme-secondary-alt border border-gray-200 text-center hover:shadow-lg transition-shadow"><div class="text-3xl mb-3">📈</div><h4 class="font-bold text-theme-text-main text-sm md:text-base">Financial Services</h4></div>
+                </div>
+            </div>
+
+            <!-- Why Us Grid -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-theme-text-main">Why Choose <span class="text-theme-primary">Hiriva?</span></h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-theme-secondary-alt border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-theme-primary-light text-theme-primary flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-theme-text-main">Global Reach, Local Expertise</h4>
+                            <p class="text-theme-text-muted text-sm">Access to diverse talent pools across multiple continents.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-theme-secondary-alt border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-theme-primary-light text-theme-primary flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-theme-text-main">Tech + Human Intelligence</h4>
+                            <p class="text-theme-text-muted text-sm">AI precision combined with expert recruiter judgment.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-theme-secondary-alt border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-theme-primary-light text-theme-primary flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-theme-text-main">Executive Confidentiality</h4>
+                            <p class="text-theme-text-muted text-sm">Trusted by organizations for sensitive leadership hiring.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-theme-secondary-alt border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-theme-primary-light text-theme-primary flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1 text-theme-text-main">Speed Without Compromise</h4>
+                            <p class="text-theme-text-muted text-sm">Reduced hiring cycles with strict quality assurance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section (Primary Background) -->
+    <section id="contact" class="py-24 relative overflow-hidden z-10 bg-theme-primary">
+        <div class="absolute inset-0 bg-grid-light pointer-events-none opacity-40"></div>
+        <!-- Slanted Background Effect -->
+        <div class="absolute inset-0 bg-theme-primary-hover/30 -skew-y-3 transform origin-top-left scale-110 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="bg-theme-secondary rounded-3xl p-8 md:p-16 flex flex-col md:flex-row gap-16 shadow-2xl border border-gray-100">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-theme-text-main">Ready to Build Your <br/><span class="text-theme-primary">Global Workforce?</span></h2>
+                    <p class="text-theme-text-muted text-lg mb-8">
+                        Partner with Hiriva and experience intelligent hiring without boundaries. Schedule a consultation today.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-theme-primary-light rounded-full flex items-center justify-center text-theme-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-sm text-theme-text-muted font-medium">Headquarters</div>
+                                <div class="font-bold text-theme-text-main">Global Offices Available</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-theme-primary-light rounded-full flex items-center justify-center text-theme-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-sm text-theme-text-muted font-medium">General Inquiries</div>
+                                <div class="font-bold text-theme-text-main">contact@hiriva.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Form submission simulation successful!');">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase text-theme-text-muted">First Name</label>
+                                <input type="text" required class="w-full bg-theme-secondary-alt border border-gray-200 text-theme-text-main rounded-lg p-3 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all shadow-sm" placeholder="Jane" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase text-theme-text-muted">Last Name</label>
+                                <input type="text" required class="w-full bg-theme-secondary-alt border border-gray-200 text-theme-text-main rounded-lg p-3 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all shadow-sm" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-theme-text-muted">Work Email</label>
+                            <input type="email" required class="w-full bg-theme-secondary-alt border border-gray-200 text-theme-text-main rounded-lg p-3 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all shadow-sm" placeholder="jane@company.com" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-theme-text-muted">How can we help?</label>
+                            <textarea rows="4" required class="w-full bg-theme-secondary-alt border border-gray-200 text-theme-text-main rounded-lg p-3 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all shadow-sm" placeholder="Tell us about your hiring needs..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-theme-primary hover:bg-theme-primary-hover text-theme-text-light font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-xl mt-2">
+                            Schedule a Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Dark Background for grounding the page) -->
+    <footer class="bg-theme-text-main pt-20 pb-10 relative overflow-hidden z-10 text-theme-text-light border-t-[8px] border-theme-primary">
+        <!-- Giant Background Text -->
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[15vw] font-bold text-white/[0.03] leading-none pointer-events-none select-none">
+            HIRIVA
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="text-3xl font-bold tracking-tighter flex items-center gap-2 mb-6">
+                        <img src="assets/Hiriva_Favicon.png" alt="Hiriva Logo" class="h-8 w-8">
+                        <span>HIRIVA<span class="text-theme-primary">.</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-8 leading-relaxed">
+                        To redefine global recruitment by combining artificial intelligence with human insight — delivering transformative talent solutions that power organizational growth.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-theme-primary hover:text-white transition-all text-gray-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-theme-primary hover:text-white transition-all text-gray-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Services</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#services" class="hover:text-theme-primary transition-colors">Overseas Recruitment</a></li>
+                        <li><a href="#services" class="hover:text-theme-primary transition-colors">Executive Search</a></li>
+                        <li><a href="#services" class="hover:text-theme-primary transition-colors">AI Sourcing Engine</a></li>
+                        <li><a href="#services" class="hover:text-theme-primary transition-colors">HR Consultancy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Company</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-theme-primary transition-colors">About Us</a></li>
+                        <li><a href="#industries" class="hover:text-theme-primary transition-colors">Industries</a></li>
+                        <li><a href="#contact" class="hover:text-theme-primary transition-colors">Partner with Us</a></li>
+                        <li><a href="#contact" class="hover:text-theme-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Hiriva. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

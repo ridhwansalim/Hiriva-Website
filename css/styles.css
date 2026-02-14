@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Grid pattern for Primary (Cyan) backgrounds */
+.bg-grid-light {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Grid pattern for Secondary (White) backgrounds */
+.bg-grid-primary {
+    background-image: linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Navbar dynamic states */
+.nav-transparent {
+    background-color: transparent;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.nav-scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
