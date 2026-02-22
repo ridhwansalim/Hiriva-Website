@@ -1,9 +1,12 @@
-# 🌍 Hiriva - Global Talent Acquisition Platform
+<div align="center">
+  <img src="assets/Hiriva_Favicon.png" alt="Hiriva Logo" width="80" />
+  <h1>🌍 Hiriva - Global Talent Acquisition Platform</h1>
+</div>
 
 Welcome to the official repository for the **Hiriva** website. Hiriva is a premier global talent acquisition platform designed to bridge the gap between worldwide professionals and top-tier companies. This platform is engineered to seamlessly match elite candidates with specific, international corporate hiring requirements.
 
 ### 🌐 Live Website
-[![Visit Hiriva](https://img.shields.io/badge/Visit_Live_Website-Hiriva-0052cc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ridhwansalim.github.io/Hiriva-Website/)
+[![Visit Hiriva](https://img.shields.io/badge/Visit_Live_Website-Hiriva-0052cc?style=for-the-badge)](https://ridhwansalim.github.io/Hiriva-Website/)
 
 ---
 
