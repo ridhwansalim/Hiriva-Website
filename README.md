@@ -1,23 +1,23 @@
-# Hiriva - Global Talent Acquisition Platform
+# 🌍 Hiriva - Global Talent Acquisition Platform
 
-Source code for the official website of Hiriva, a global talent acquisition platform. Hiriva bridges the gap between worldwide professionals and top companies by matching top-tier candidates with specific international corporate hiring requirements.
+Welcome to the official repository for the **Hiriva** website. Hiriva is a premier global talent acquisition platform designed to bridge the gap between worldwide professionals and top-tier companies. This platform is engineered to seamlessly match elite candidates with specific, international corporate hiring requirements.
 
-## 🚀 Features
-* **Modern UI/UX:** Clean, professional design focused on enterprise clients and global talent.
-* **Fully Responsive:** Optimized for desktop, tablet, and mobile viewing.
-* **Dynamic Navigation:** Scroll-aware navbar that adapts its styling based on page position.
-* **Custom Theming:** Centralized JavaScript configuration for instant site-wide color theme updates.
+### 🌐 Live Website
+[![Visit Hiriva](https://img.shields.io/badge/Visit_Live_Website-Hiriva-0052cc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ridhwansalim.github.io/Hiriva-Website/)
 
-## 🛠️ Tech Stack
-* **HTML5:** Semantic structure and content.
-* **Tailwind CSS:** Utility-first styling (configured for rapid UI development).
-* **Vanilla JavaScript:** DOM manipulation and scroll event handling.
-* **Custom CSS:** Complex background grid patterns and specific animations.
+---
 
-## 💻 Getting Started
+### 🚀 Key Features
+* **Modern UI/UX:** A clean, professional, and corporate-focused design tailored for enterprise clients and top-tier global talent.
+* **Fully Responsive:** Highly optimized for flawless viewing across desktop, tablet, and mobile devices.
+* **Dynamic Navigation:** A smart, scroll-aware navbar that automatically adapts its styling based on the user's page position.
+* **Custom Theming:** Centralized JavaScript configuration allowing for instant, site-wide color theme updates and brand adjustments.
 
-To view and edit this project locally:
+### 🛠️ Tech Stack
+* **HTML5:** Semantic, accessible structure and content layout.
+* **Tailwind CSS:** Utility-first styling configured for rapid, scalable UI development.
+* **Vanilla JavaScript:** Efficient DOM manipulation, dynamic event handling, and scroll interactions without heavy frameworks.
+* **Custom CSS:** Tailored styling for complex background grid patterns and specific, smooth UI animations.
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/hiriva-landing-page.git](https://github.com/yourusername/hiriva-landing-page.git)
+---
+*Developed by Ridhwan S | Crafted for modern corporate talent acquisition.*
